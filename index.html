@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下班倒计时</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-deco bg-deco1"></div>
+    <div class="bg-deco bg-deco2"></div>
+    <div class="bg-deco bg-deco3"></div>
+    <div class="container">
+        <div id="date-section">
+            <div id="date-widget"></div>
+            <div id="lunar-widget"></div>
+        </div>
+        <h1>下班倒计时</h1>
+        <div id="countdown" class="countdown">
+            <div class="time-card">
+                <span id="hours" class="value">00</span>
+                <span class="label">小时</span>
+            </div>
+            <div class="time-card">
+                <span id="minutes" class="value">00</span>
+                <span class="label">分钟</span>
+            </div>
+            <div class="time-card">
+                <span id="seconds" class="value">00</span>
+                <span class="label">秒数</span>
+            </div>
+        </div>
+        <div class="progress-bar-wrap">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <hr class="divider">
+        <div class="settings">
+            <div>
+                <label for="off-work-time">目标时间:</label>
+                <input type="time" id="off-work-time" value="18:00">
+            </div>
+            <button id="set-time-btn">修改时间</button>
+        </div>
+        <div id="message" class="message"></div>
+        <div class="history">
+            <h2>下班记录</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="emoji">🎉</span>
+            <span class="text">下班啦</span>
+            <div class="modal-btns">
+                <button id="reset-btn">重置倒计时</button>
+                <button id="mute-btn">关闭声音</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="holiday-modal" class="modal">
+        <div class="modal-content">
+            <span class="emoji" id="holiday-emoji">🎉</span>
+            <span class="text" id="holiday-text">节日快乐！</span>
+        </div>
+    </div>
+
+    <audio id="tada-sound" src="tada.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html> 
